@@ -4,7 +4,7 @@ set -Eeuo pipefail
 APP_NAME="hax-bot"
 BASE_DIR="/opt"
 SERVICE_NAME="hax-bot"
-REPO_URL="${REPO_URL:-https://github.com/mingyueqianli/hax-bot-7.7.git}"
+REPO_URL="${REPO_URL:-https://github.com/mingyueqianli/hax-bot-7.9.git}"
 BRANCH="${BRANCH:-main}"
 APP_DIR="$BASE_DIR/$APP_NAME"
 BACKUP_DIR="$BASE_DIR/${APP_NAME}-backup-$(date +%Y%m%d-%H%M%S)"
