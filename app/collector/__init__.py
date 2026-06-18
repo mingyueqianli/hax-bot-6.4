@@ -1,0 +1,1 @@
+"""HAX data collector module."""

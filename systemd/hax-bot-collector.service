@@ -1,0 +1,20 @@
+[Unit]
+Description=HAX BOT 7.8 Collector Service
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/hax-bot
+EnvironmentFile=-/opt/hax-bot/config.env
+Environment="PYTHONPATH=/opt/hax-bot"
+Environment="PATH=/opt/hax-bot/venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/opt/hax-bot/venv/bin/python -m app.collector.runner
+Restart=always
+RestartSec=10
+StandardOutput=append:/opt/hax-bot/logs/collector.log
+StandardError=append:/opt/hax-bot/logs/collector_error.log
+
+[Install]
+WantedBy=multi-user.target
